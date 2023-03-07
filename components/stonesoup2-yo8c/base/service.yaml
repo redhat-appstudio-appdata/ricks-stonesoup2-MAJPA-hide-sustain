@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: stonesoup2-yo8c
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: stonesoup2-yo8c
+    app.kubernetes.io/part-of: ricks-stonesoup2
+  name: stonesoup2-yo8c
+  namespace: rhn-support-rick-tenant
+spec:
+  ports:
+  - port: 8081
+    targetPort: 8081
+  selector:
+    app.kubernetes.io/instance: stonesoup2-yo8c
+status:
+  loadBalancer: {}
